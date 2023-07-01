@@ -1,0 +1,27 @@
+print("Criando um Sistema Bancário com Python")
+
+menu = -1
+limite = float(500.00)
+
+
+programa = int(input("1 - Entrar no programa \n0 - Fechar o programa\n"))
+if programa == 1:
+    while menu != 0:
+            menu=int(input("1 - Saque \n2 - Depósito \n3 - Extrato \n0 - Fechar o programa\n1"))
+            
+            match menu:
+                case 1:
+                    sacar = float(input("Você escolheu SACAR. Por gentileza, digite o valor do saque:\n"))
+                    
+                    if sacar <= 0.00:
+                        print("Por gentileza digitar um valor válido")
+                    else:
+                        print("Valor do saque foi de: ", sacar)
+                        
+                case 2:
+                    print("Você escolheu DEPOSITAR. Por gentileza, digite o valor do depósito\n")
+                case 3:
+                    print("Você escolheu EXTRATO.\n")
+                    
+elif programa == 0:
+    print("Obrigada pela atenção!!!")

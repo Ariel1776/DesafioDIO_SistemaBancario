@@ -1,0 +1,23 @@
+op = -1
+limite = float(500.00)
+
+while op !=0:
+    op = int(input("1 - Sacar \n2 - Depósito \n3 - Extrato \n0 - Sair \n"))
+    
+    if op == 1:
+        print("Opção SAQUE\n")
+        sacar = input("Digite o valor a ser sacado: ")
+        sacar = float(sacar)
+        
+        if sacar <= -1.0:
+            print("Por gentileza digite um valor válido\n")
+        else:
+            print("Valor a ser sacado é: ", sacar)
+        
+    elif op == 2:
+        print("Opção DEPÓSITO\n")
+        
+    elif op == 3:
+        print("Opção EXTRATO\n")
+    else:
+        print("Por gentileza, digite um número válido\n")

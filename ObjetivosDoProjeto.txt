@@ -1,0 +1,13 @@
+- **Criando um Sistema Bancário com Python**
+    - Saque → Função **sacar**
+        - Apenas três saques diários
+        - Se não tiver money - Informar o usuário
+        - Limite de saque R$500,00
+    - Depósito → Função **depositar**
+        - Depositar valores positivos
+        - Apenas um usuário
+        - Armazenar os depósitos
+    - Extrato → Função **visuExtrato**
+        - Deve listar todos os Depósitos e Saques
+        - Mostrar o extrato atual
+        - Valor deve ser exibido no formato → “*R$ xxxx.xx*”
