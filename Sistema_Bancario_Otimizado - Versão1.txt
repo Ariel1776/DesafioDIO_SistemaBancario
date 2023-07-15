@@ -1,0 +1,50 @@
+print("Criando um Sistema Bancário com Python")
+limite = float(500.00)
+conta = 0.0
+
+#deposito ->
+    #Sugestão de argumentos: saldo, valor_deposito, extrato
+    #Sugestão de retorno: saldo e extrato.
+def deposito():
+    global conta
+    
+    depositar = float(input("Você escolheu DEPOSITAR. Por gentileza, digite o valor do depósito: R$"))
+    conta = depositar
+    
+    
+#saque -> 
+    #Sugestão de argumentos: saldo, _saque, extrato ,limite(500.00), numero_saques, limite_saques(3)
+    #Sugestão de retorno: saldo e extrato.
+def saque():
+    global conta
+    
+    sacar = float(input("Limite do saque R$500.00 \nVocê escolheu SACAR. Por gentileza, digite o valor do saque: R$"))
+    if conta <= 0.0:
+                    print("Impossível sacar, sua conta está ZERADA. Deposite algo primeiro.")
+    else:
+        while True: 
+            sacar = float(input("Limite do saque R$500.00 \nVocê escolheu SACAR. Por gentileza, digite o valor do saque: R$"))        
+            if sacar <= 0.00:
+                print("Por gentileza digitar um valor válido")
+            elif sacar > limite:
+                print("Por gentileza digitar um valor menor que o limite")
+            else:
+                conta = conta-sacar
+                print("Valor do saque foi de: R$", sacar)
+                break               
+
+#extrato ->
+    #Argumentos posicionais: saldo
+    #Argumentos nomeados: extrato
+def extrato(sacar):
+    global conta
+    
+    conta = conta-sacar
+    print("Valor do saque foi de: R$", sacar)
+    
+    
+    
+    
+deposito()
+saque() 
+extrato(conta)
